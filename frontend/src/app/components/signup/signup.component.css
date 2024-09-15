@@ -1,0 +1,46 @@
+.signin{
+    background: #0e141b;
+}
+
+.mat-toolbar{
+    width: auto;
+    margin-bottom: 12px;
+}
+
+.title-center{
+    flex: 1 1 auto;
+    text-align: center;
+}
+
+mat-form-field{
+    padding: 5px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+mat-dialog-actions{
+    margin-top: 10px;
+    margin: auto;
+}
+
+
+.mat-toolbar {
+    background-color: #0e141b;
+    border: solid 2px #198754 ;
+    border-radius: 0 0 1rem 1rem;
+  }
+
+#register{
+    font-size: 130%;
+    color: aliceblue;
+    background: #0887ba;
+}
+
+.mat-input-element {
+    background-color: transparent !important;
+  }
+/* inputs darks */
+
+
+
+

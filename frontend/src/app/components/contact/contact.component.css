@@ -1,0 +1,25 @@
+.container{
+    background: #0e141b;
+}
+
+.contact-inputs {
+    display: flex;
+    align-items: center; 
+}
+
+.country-code {
+    flex: 1 1 30%; 
+    margin-right: 0.5rem; 
+}
+
+.phone-number {
+    flex: 1 1 70%; 
+}
+
+input::placeholder {
+    color: white
+}
+
+textarea::placeholder {
+    color: white
+}

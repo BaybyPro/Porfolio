@@ -1,0 +1,101 @@
+<div class="signin ">
+    <mat-toolbar color="primary">
+    <mat-toolbar-row fxLayout="row">
+        <span class="title-center text-white text-opacity-75" style="font-weight: 900; font-size: 200%;">REGISTRARSE</span>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+
+<mat-dialog-content class="mat-typography">
+    <form [formGroup]="signupform">
+    <div fxFlex fxLayout="column">
+        <mat-form-field appearance="fill" fxFlex fxLayoutAlign="space-around none" >
+            <mat-label>name</mat-label>
+            <input matInput formControlName="name" required>
+            @if(signupform.controls.name.touched && signupform.controls.name.invalid){
+                <mat-error>
+                    @if(signupform.controls.name.errors.required){
+                    <span>Este campo es obligatorio</span>}
+                    @else if (signupform.controls.name.errors.pattern) {
+                        <span>this field is invalid</span>
+                    }
+                </mat-error>
+            }
+        </mat-form-field>
+        <mat-form-field appearance="fill" fxFlex>
+          <mat-label>Email</mat-label>
+          <input matInput formControlName="email" autocomplete="off" required id="email" name="email"> 
+          <mat-error>
+            @if (signupform.controls.email.touched && signupform.controls.email.invalid) {
+                <mat-error>
+                    @if (signupform.controls.email.errors.required){
+                        <span>Este campo es obligatorio</span>
+                    }
+                    @else if (signupform.controls.email.errors.pattern){
+                        <span>Esto es invalido</span>
+                    }
+                </mat-error>
+            }
+          </mat-error>
+        </mat-form-field>
+        <div class="mb-3 w-100">
+            <div class="d-flex w-100 contact-inputs align-items-center contact-inputs">
+                <mat-select class="form-control country-code w-25" placeholder="código" formControlName="country_code" required>
+                    @for (code of countryCodes; track code) {
+                        <mat-option style="width: 100%;" [value]="code.code">
+                            <img [src]="'https://purecatamphetamine.github.io/country-flag-icons/3x2/' + code.flag + '.svg'" width="20px" style="margin-right: 10px;" /> 
+                            {{ code.name }}
+                        </mat-option>
+                    }
+                </mat-select>
+                <mat-form-field appearance="fill" fxFlex>
+                    <mat-label>Numero de contacto</mat-label>
+                    <input matInput formControlName="contact_number" autocomplete="off" required id="contact_number"> 
+                    <mat-error>
+                      @if (signupform.controls.contact_number.touched && signupform.controls.contact_number.invalid) {
+                          <mat-error>
+                              @if (signupform.controls.contact_number.errors.required){
+                                  <span>Este campo es obligatorio</span>
+                              }
+                              @else if (signupform.controls.contact_number.errors.pattern){
+                                  <span>Esto es invalido</span>
+                              }
+                          </mat-error>
+                      }
+                    </mat-error>
+                  </mat-form-field>
+            </div>
+        </div>
+        
+        <mat-form-field appearance="fill" fxFlex >
+            <mat-label>Password</mat-label>
+            <input matInput formControlName="password" type="password" autocomplete="new-password" required id="passwordPorfile">
+            <mat-error>
+              @if (signupform.controls.password.touched && signupform.controls.password.invalid) {
+                  <mat-error>
+                      @if (signupform.controls.password.errors.required){
+                          <span>Este campo es obligatorio</span>
+                      }
+                      @else if (signupform.controls.password.errors.pattern){
+                          <span>Esto es invalido</span>
+                      }
+                  </mat-error>
+              }
+            </mat-error>
+          </mat-form-field>
+    </div>
+    </form>
+</mat-dialog-content>
+
+
+
+<mat-dialog-actions align="center">
+    <button mat-raised-button  type="submit" (click)="submit()" class="btn btn-outline-success btn-lg"  [disabled]="!(signupform.valid && signupform.dirty)">Registrarse</button>
+    <button mat-raised-button  mat-dialog-close>Cerrar</button>
+</mat-dialog-actions>
+</div>
+
+
+
+
+

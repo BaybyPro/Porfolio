@@ -1,0 +1,27 @@
+.container{
+    background: #0e141b;
+}
+h1{
+    font-family: "New Amsterdam", sans-serif;
+}
+
+h2{
+    font-family: "New Amsterdam", sans-serif;
+}
+
+.icon{
+
+    height: 400px;
+}
+
+.icon-email{
+    font-size: 20.5rem;
+    
+}
+
+@media (max-width: 576px){
+    .icon-email{
+        font-size: 10.5rem;
+        
+    }
+}

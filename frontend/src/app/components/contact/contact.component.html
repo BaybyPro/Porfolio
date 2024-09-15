@@ -1,0 +1,80 @@
+<div class="container d-flex justify-content-center">
+    <div class="w-50">
+        <div class="text-center text-success my-4">
+            <h1>Contactame</h1>
+            <p>Aquí puedes enviarme un mensaje y te responderé lo mas pronto posible.</p>
+        </div>
+    
+        <form [formGroup]="formContac" (submit)="submit()" >
+            <div class="mb-3">
+                <label for="nombre" class="form-label text-success">Nombre</label>
+                @if (formContac.controls['name'].touched && formContac.controls['name'].invalid) {
+                    <div class="span">
+                        <span>Rango de 5 a 50 sin simbolos!</span>
+                    </div>
+                }
+                <!-- campo de nombre -->
+                @if(!authservice.loggedIn()){
+                    <input type="text" class="form-control" id="name" formControlName="name" placeholder="Inserte nombre o empresa" required />
+                }@else {<input type="text" class="form-control no-click text-light" id="name" formControlName="name" value={{user?.name}} readonly />}
+                
+            </div>
+             <div class="mb-3">
+                <label for="email" class="form-label text-success">Email</label>
+                @if (formContac.controls['email'].touched && formContac.controls['email'].invalid) {
+                    <div class="span">
+                        <span>Campo requerido formato email!</span>
+                    </div>
+                }
+                <!-- campo de email -->
+                @if(!authservice.loggedIn()){
+                <input type="email" class="form-control" id="email" formControlName="email" placeholder="Inserte email" required />
+                }@else{<input type="email" class="form-control no-click text-light" id="email" formControlName="email" value={{user?.email}} required />}
+            </div>
+            <div class="mb-3 w-75">
+                <label for="contact_info" class="form-label text-success">Número de contacto</label>
+                <div class="contact-inputs">
+
+                    <!-- campo código y numero de contacto -->
+                     @if(!authservice.loggedIn()){
+                        <mat-select class="form-control country-code"  placeholder="código" formControlName="country_code" required >
+                            @for (code of countryCodes; track code) {
+                              <mat-option style="width: 550px;" [value]="code.code"> <img [src]="'https://purecatamphetamine.github.io/country-flag-icons/3x2/' + code.flag + '.svg'" width="20px" style="margin-right: 10px;" /> {{code.name}} </mat-option>
+                            }
+                          </mat-select>
+                        <input type="number" class="form-control phone-number" id="phone_number" formControlName="contact_number" placeholder="Número de teléfono" required>
+                        @if (formContac.controls['contact_number'].touched && formContac.controls['contact_number'].invalid) {
+                            <div class="span">
+                                <span>requeridos!</span>
+                            </div>
+                        }
+                     }@else {
+                        <input class="form-control country-code no-click text-light"  formControlName="country_code" value={{user?.country_code}} required >
+                        <input type="number" class="form-control phone-number no-click text-light" id="phone_number" formControlName="contact_number" value={{user?.contact_number}}  required>
+                        @if (formContac.controls['contact_number'].touched && formContac.controls['contact_number'].invalid) {
+                            <div class="span">
+                                <span>requeridos!</span>
+                            </div>
+                        }
+                     }
+                    
+                </div>
+            </div>
+            
+            <div class="mb-3">
+                <label for="message" class="form-label text-success">Mensaje</label>
+                @if (formContac.controls['message'].touched && formContac.controls['message'].invalid) {
+                    <div class="span">
+                        <span>Campo requerido!</span>
+                    </div>
+                }
+                <textarea  class="form-control" id="message" formControlName="message" rows="5" placeholder="Escriba su mensaje"></textarea>
+            </div>
+            <button type="submit"  class="btn btn-outline-success my-4" [disabled]="!(formContac.valid && formContac.dirty)">
+                Enviar
+            </button>
+        </form>
+    </div>
+</div>
+
+

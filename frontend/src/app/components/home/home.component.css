@@ -1,0 +1,81 @@
+.container{
+    border-radius: 2em 2rem 0 0;
+    background: url('../../../assets/img/fondo2.jpg')no-repeat center center;
+     background-size: cover;
+   
+ }
+
+
+
+.name{
+    margin: 10px 0;
+    font-family: "New Amsterdam", sans-serif;
+    font-size: 360%;
+    font-weight: 500;
+    text-shadow: 3px 2px 0px rgba(255, 255, 255, 0.37);
+    
+}
+.foto{
+    width:150px;
+    border-radius:40%;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.information{
+    font-family: sans-serif;
+    line-height: 1.4;
+    padding-top: 20px;
+    color: #1c9b60;
+    font-family: "Tomorrow", sans-serif;
+    font-weight: 600;
+    
+    
+}
+
+.content-i{
+    margin-top: -50px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+    
+}
+
+.cabecera{
+    font-weight:600;
+    text-align:center;
+}
+
+ul {
+    list-style: none;
+    padding-left:0;
+    color: #136941;
+    font-family: "New Amsterdam", sans-serif;
+    font-size: 1.3em;
+}
+li{
+    font-size: 120%;
+}
+
+.habilidades {
+    border: groove 13px #177c4d;
+    border-radius: 1.5rem;
+    margin: -60px 1% 0 1%;
+    padding-top: 40px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+
+
+@media (max-width: 576px) {
+  .name {
+    font-size: 2.15rem; /* Equivalente a fs-3 */
+  }
+  .foto{
+    width:140px;
+  }
+  .content-i{
+    margin-top: -50px;
+    border: none;
+  }
+  .habilidades{
+    margin: -30px 1% 0 1%;
+  }
+}
