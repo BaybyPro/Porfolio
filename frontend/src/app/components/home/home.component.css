@@ -2,7 +2,7 @@
     border-radius: 2em 2rem 0 0;
     background: url('../../../assets/img/fondo2.jpg')no-repeat center center;
      background-size: cover;
-   
+     box-shadow: 10px 10px 20px rgba(0, 0, 0, 1);
  }
 
 

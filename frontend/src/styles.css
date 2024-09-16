@@ -28,6 +28,7 @@ body{
 
 .router{
     background: url('../src/assets/img/programs.png');
+    
 }
 
 .span{
@@ -67,7 +68,7 @@ button:disabled {
   }
 /* DESACTIVAR CLICK*/
 .no-click {
-    pointer-events: none;
+    
   }
   
 
