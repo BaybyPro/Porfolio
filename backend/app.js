@@ -4,6 +4,7 @@ var bodyParser = require('body-parser');
 const ContactRouter = require('./routes/contact');
 const UserRouter = require('./routes/user');
 const cors = require('cors');
+const connection = require('./connection')
 
 //middlweares
 app.use(bodyParser.urlencoded({extended:false}));
