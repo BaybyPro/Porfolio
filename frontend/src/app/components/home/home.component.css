@@ -1,81 +1,105 @@
-.container{
-    border-radius: 2em 2rem 0 0;
-    background: url('../../../assets/img/fondo2.jpg')no-repeat center center;
-     background-size: cover;
-     box-shadow: 10px 10px 20px rgba(0, 0, 0, 1);
- }
-
-
-
-.name{
-    margin: 10px 0;
-    font-family: "New Amsterdam", sans-serif;
-    font-size: 360%;
-    font-weight: 500;
-    text-shadow: 3px 2px 0px rgba(255, 255, 255, 0.37);
-    
-}
-.foto{
-    width:150px;
-    border-radius:40%;
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+.container {
+  background: url('../../../assets/img/fondo2.jpg') no-repeat center center;
+  background-size: cover;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 1);
+  padding: 2rem;
 }
 
-.information{
-    font-family: sans-serif;
-    line-height: 1.4;
-    padding-top: 20px;
-    color: #1c9b60;
-    font-family: "Tomorrow", sans-serif;
-    font-weight: 600;
-    
-    
+.name {
+  margin: 10px 0;
+  font-family: "New Amsterdam", sans-serif;
+  font-size: 3.6rem;
+  font-weight: 500;
+  text-shadow: 3px 2px 0px rgba(255, 255, 255, 0.37);
+  color: #e6f7f0;
 }
 
-.content-i{
-    margin-top: -50px;
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
-    
+.foto {
+  width: 150px;
+  border-radius: 50%;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.cabecera{
-    font-weight:600;
-    text-align:center;
+.foto:hover {
+  transform: scale(1.1);
+  box-shadow: 12px 12px 25px rgba(0, 0, 0, 0.7);
+}
+
+.information {
+  font-family: "Tomorrow", sans-serif;
+  font-weight: 600;
+  line-height: 1.6;
+  padding-top: 20px;
+  color: #ffffff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  text-align: justify;
+}
+
+.content-i {
+  margin-top: -50px;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 1.5rem;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.cabecera {
+  font-weight: 600;
+  text-align: center;
+  color: #1c9b60;
+  margin-bottom: 1rem;
 }
 
 ul {
-    list-style: none;
-    padding-left:0;
-    color: #136941;
-    font-family: "New Amsterdam", sans-serif;
-    font-size: 1.3em;
+  list-style: none;
+  padding-left: 0;
+  color: #9aecb6;
+  font-family: "New Amsterdam", sans-serif;
+  font-size: 1.2rem;
 }
-li{
-    font-size: 120%;
+
+li {
+  font-size: 1.1rem;
+  line-height: 1.8;
 }
 
 .habilidades {
-    border: groove 13px #177c4d;
-    border-radius: 1.5rem;
-    margin: -60px 1% 0 1%;
-    padding-top: 40px;
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(145deg, #0d4129, #000);
+  border-radius: 1.5rem;
+  margin: -60px 1% 0 1%;
+  padding: 2rem;
+  color: #e6f7f0;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.habilidades:hover {
+  transform: translateY(-10px);
+  box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.8);
+}
 
+.btn-outline-success {
+  color: #e6f7f0;
+  border-color: #1c9b60;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-outline-success:hover {
+  background-color: #1c9b60;
+  color: #ffffff;
+}
 
 @media (max-width: 576px) {
   .name {
-    font-size: 2.15rem; /* Equivalente a fs-3 */
+      font-size: 2.5rem;
   }
-  .foto{
-    width:140px;
+
+  .foto {
+      width: 120px;
   }
-  .content-i{
-    margin-top: -50px;
-    border: none;
-  }
-  .habilidades{
-    margin: -30px 1% 0 1%;
+
+  .habilidades {
+      margin: -30px 1% 0 1%;
+      padding: 1.5rem;
   }
 }

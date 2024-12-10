@@ -1,3 +1,6 @@
+
+
+
 body{
     background: #0e141b;
     font-family: inherit;
@@ -6,15 +9,26 @@ body{
 
 }
 
-.navbar{
-    border: solid 2px #198754;
-    border-radius: 1em;
-
+.navbar {
+  background: linear-gradient(to right, #16573a, #000);
+  padding: 1rem;
 }
+
+.navbar-brand {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.navbar-brand:hover {
+  text-decoration: none;
+  color: #c3ffc3; /* Verde claro */
+}
+
 
 .search{
     background: #949494;
-    border: solid 2px #198754;
+    border: solid 2px #06532f;
 }
 
 
@@ -65,6 +79,14 @@ button:disabled {
 /* ACTIVATE*/
   .active{
     color: aqua;
+  }
+
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #000;
+    color: #fdfdfd;
+    font-size: 0.9rem;
   }
 /* DESACTIVAR CLICK*/
 .no-click {

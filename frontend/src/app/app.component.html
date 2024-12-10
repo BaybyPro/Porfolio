@@ -1,22 +1,21 @@
 <nav class="navbar navbar-expand-lg">
   <div class="container-fluid">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
     <img src="../assets/img/logo.png" class="logo">
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-      
-    <a class="navbar-brand text-success fs-1 ms-4" href="#">&lt;/&gt; Desarollador full stack</a>
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
-        <li class="nav-item ">
-          <a class="nav-link active text-success fs-5" aria-current="page" routerLink="/home"   routerLinkActive="active">Inicio</a>
+    <a class="navbar-brand  fs-1 ms-4" href="#">&lt;/&gt; Desarollador full stack</a>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/home" routerLinkActive="active">Inicio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-success fs-5" routerLink="/contact" routerLinkActive="active" >Contact</a>
+          <a class="nav-link" routerLink="/contact" routerLinkActive="active">Contacto</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-success fs-5" routerLink="/projects" routerLinkActive="active">Projects</a>
+          <a class="nav-link" routerLink="/projects" routerLinkActive="active">Proyectos</a>
         </li>
       </ul>
         @if(!authService.loggedIn()){
@@ -40,8 +39,8 @@
 </div>
 
 
-<footer class="footer text-muted my-5">
-  <div class="container text-black">
+<footer class="footer text-muted">
+  <div class="container">
       &copy; 2024 - Portfolio  - Kevin
   </div>
 </footer>

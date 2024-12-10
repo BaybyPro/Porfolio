@@ -1,8 +1,16 @@
 .nav-link {
-    position: relative;
-    text-decoration: none;
-    color: #198754; /* Color verde */
+  position: relative;
+  text-decoration: none;
+  color: #fff; /* Blanco para contraste */
+  margin-right: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+  .nav-link.active {
+    color: #c3ffc3; /* Verde claro */
   }
+
   
   .nav-link::after {
     content: '';
@@ -11,7 +19,7 @@
     bottom: 0;
     width: 0;
     height: 2px;
-    background-color: #198754; /* Color de la línea */
+    background-color: #c3ffc3; /* Verde claro */
     transition: all 0.3s ease;
   }
   
@@ -20,6 +28,19 @@
     width: 100%; /* Expande a todo el ancho */
     left: 0; /* Alinea con el borde izquierdo */
   }
+
+  .btn-outline-success {
+    color: #8eff8e; /* Verde claro */
+    border-color: #8eff8e;
+    transition: all 0.9s ease;
+  }
+
+  .btn-outline-success:hover {
+    background-color: #c3ffc3;
+    color: #000;
+  }
+
+
   
 
   
